@@ -1,0 +1,42 @@
+{
+  "goods": [
+    {
+      "id": 1,
+      "img": "img/item1.jpg"
+    },
+    {
+      "id": 2,
+      "img": "img/item2.jpg"
+    },
+    {
+      "id": 3,
+      "img": "img/item3.jpg"
+    },
+    {
+      "id": 4,
+      "img": "img/item4.jpg"
+    },
+    {
+      "id": 5,
+      "img": "img/item5.jpg"
+    },
+    {
+      "id": 6,
+      "img": "img/item6.jpg"
+    },
+    {
+      "id": 7,
+      "img": "img/item7.jpg"
+    },
+    {
+      "id": 8,
+      "img": "img/item8.jpg"
+    }
+  ],
+  "cart": [
+    {
+      "id": "1",
+      "qty": 1
+    }
+  ]
+}
