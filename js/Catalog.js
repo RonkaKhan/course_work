@@ -28,13 +28,15 @@ class GoodList {
             return `<div>Ничего не найдено</div>`;
         }
 
-        return this.items.map((item) => new Item(item.id, item.img).render()).join('');
+        return this.items.map((item) => new Item(item.id, item.title, item.price, item.img).render()).join('');
     }
 }
 
 class Item {
-    constructor(id, img) {
+    constructor(id, title, price, img) {
         this.id = id;
+        this.title = title;
+        this.price = price;
         this.img = img;
     }
 
@@ -44,11 +46,11 @@ class Item {
                 <img src="${this.img}" alt="Product_photo"> 
             </a>
             <div class="item__content"> 
-                <a href="#" class="item__name">Mango People T-shirt</a>
-                <p class="item__price">$52.00</p>
+                <a href="#" class="item__name">${this.title}</a>
+                <p class="item__price">$${this.price}.00</p>
             </div>
             <a href="#" class="item__add">
-                <div class="mini_cart buy" data-id="${this.id}"> <img src="img/cart__bottom.png" alt="cart"> Add to Cart</div></a>
+                <div class="mini_cart buy" data-id="${this.id}" data-title="${this.title}" data-price="${this.price}"> <img src="img/cart__bottom.png" alt="cart"> Add to Cart</div></a>
             </div>`
     }
 }
