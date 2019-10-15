@@ -53,9 +53,11 @@
                         </details>
                     </div>
                     <form action="#" id="form1">
-                        <input class="search_input" type="text" placeholder="Search for Item..."></form>
-                    <button class="search" type="button" form="form1" value="Submit"><i class="fas fa-search"></i>
-                    </button>
+                        <input class="search_input" type="text" v-model="query" name="query"
+                               placeholder="Search for Item...">
+                    <button @click="handleSearchClick" class="search" type="button" form="form1" value="Submit"><i
+                            class="fas fa-search"></i>
+                    </button></form>
                 </div>
                 <div class="header__block">
                     <details class="cart">
@@ -404,7 +406,19 @@
     const app = new Vue({
         el: '#root',
         data: {
-            cats: ['Dresses', 'Tops', 'Sweaters/Knits', 'Jackets/Coats', 'Blazers', 'Denim', 'Leggings/Pants', 'Skirts/Shorts', 'Accessories']
+            cats: ['Dresses', 'Tops', 'Sweaters/Knits', 'Jackets/Coats', 'Blazers', 'Denim', 'Leggings/Pants', 'Skirts/Shorts', 'Accessories'],
+            items: [],
+            filteredItems: [],
+            query: '',
+        },
+        methods: {
+            handleSearchClick() {
+                this.filteredItems = this.items.filter((item) => {
+                    const regexp = new RegExp(this.query, 'i');
+
+                    return regexp.test(item.title);
+                });
+            }
         }
     });
 </script>

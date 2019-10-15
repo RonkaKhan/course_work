@@ -35,6 +35,7 @@ class Cart {
             .then((item) => {
                 const $item = document.querySelector(`.cart__items div[data-id="${id}"]`);
                 if($item) {
+                    console.log($item);
                     $item.remove();
                 }
             });
@@ -57,10 +58,6 @@ class Cart {
 
         const idx = this.items.findIndex(entity => entity.id === id);
         this.items[idx].qty = newQty;
-    }
-
-    change(container, action) {
-
     }
 
     renderItem(item) {
@@ -103,10 +100,12 @@ cart.fetchItems().then(() => {
 });
 
 document.querySelector('.products').addEventListener('click', (event) => {
-    console.log(event.target);
+    event.preventDefault();
     if (event.target.classList.contains('buy')) {
         const id = event.target.dataset.id;
         const $item = document.querySelector(`.cart__items div[data-id="${id}"]`);
+        console.log($item);
+        console.dir($item);
         if ($item) {
             const $currentQty = $item.querySelector('.qty');
             $currentQty.textContent = +$currentQty.textContent + 1;

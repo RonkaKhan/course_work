@@ -59,3 +59,10 @@ const items = new GoodList();
 items.fetchItems().then(() => {
     document.querySelector('.products').innerHTML = items.render();
 });
+
+document.querySelector('.search').addEventListener('click', (event) => {
+    const $brother = event.target.parentElement.children[0];
+    const query = $brother.value;
+    items.filter(query);
+    document.querySelector('.products').innerHTML = items.render();
+});
