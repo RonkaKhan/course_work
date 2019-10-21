@@ -53,9 +53,9 @@
                         </details>
                     </div>
                     <form action="#" id="form1">
-                        <input class="search_input" type="text" v-model="query" name="query"
+                        <input class="search_input" type="text" name="query"
                                placeholder="Search for Item...">
-                    <button @click="handleSearchClick" class="search" type="button" form="form1" value="Submit"><i
+                    <button class="search" type="button" form="form1" value="Submit"><i
                             class="fas fa-search"></i>
                     </button></form>
                 </div>
@@ -242,6 +242,7 @@
                 <li class="menu__list"><a href="#" class="menu__link">Deals</a></li>
             </ul>
         </nav>
+        <div class="searchResult container"></div>
         <div class="promo">
             <div class="container promo__content">
                 <div class="promo__text">

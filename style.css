@@ -674,6 +674,13 @@ tr {
 	outline: none;
 }
 
+.searchResult {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 100px;
+}
+
 .grey {
 	border-bottom: 4px solid #d6d6d6;
 	margin-left: 13px;
@@ -772,6 +779,7 @@ tr {
 	border: 1px solid #ececec;
 	position: absolute;
 	top: 46px;
+	z-index: 999;
 }
 
 .drop__ul {
