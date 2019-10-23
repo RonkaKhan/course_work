@@ -1,0 +1,60 @@
+{
+  "goods": [
+    {
+      "id": 1,
+      "title": "Футболка мужская",
+      "price": 20,
+      "img": "img/item1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Блуза",
+      "price": 25,
+      "img": "img/item2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Куртка",
+      "price": 52,
+      "img": "img/item3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Футболка женская",
+      "price": 20,
+      "img": "img/item4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Блуза",
+      "price": 27,
+      "img": "img/item5.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Пиджак мужской",
+      "price": 50,
+      "img": "img/item6.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Брюки мужские",
+      "price": 30,
+      "img": "img/item7.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Толстовка",
+      "price": 35,
+      "img": "img/item8.jpg"
+    }
+  ],
+  "cart": [
+    {
+      "id": "7",
+      "title": "Брюки мужские",
+      "price": "30",
+      "qty": 3
+    }
+  ]
+}
